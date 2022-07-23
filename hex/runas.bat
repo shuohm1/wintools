@@ -1,3 +1,3 @@
 @echo off
-powershell Start-Process ".\__privilege__.bat" -Verb runas
+powershell Start-Process ".\privilege.bat" -Verb runas
 exit /b
