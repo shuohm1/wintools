@@ -9,7 +9,7 @@ if %_DPZERO_:~-1%==\ set _DPZERO_=%_DPZERO_:~0,-1%
 
 rem -- check privileges
 openfiles 1> NUL 2>&1
-if %errorlevel% neq 0 (
+if %errorlevel% NEQ 0 (
 	call :printerror /w "you have no administrator privileges"
 	goto :restartrunas
 ) else (
@@ -18,7 +18,7 @@ if %errorlevel% neq 0 (
 
 set num_args=0
 for %%I in (%*) do set /a num_args += 1
-if %num_args% equ 0 call :printerror /d "there are no arguments"
+if %num_args% EQU 0 call :printerror /d "there are no arguments"
 for %%I in (%*) do call :printerror /d "${W*}%%~I${D}"
 
 pause
